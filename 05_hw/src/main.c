@@ -22,7 +22,7 @@ int main()
     printf("After popping an element:\n");
     traverseStack(&stack);
 
-    Node* searchResult = searchByValue(&stack, second);
+    Node *searchResult = searchByValue(&stack, second);
     if (searchResult != NULL)
     {
         printf("Element with value 20 found.\n");
