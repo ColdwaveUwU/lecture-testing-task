@@ -38,6 +38,7 @@ void pop(Stack *stack)
 {
     Node *temp = stack->top;
     stack->top = stack->top->next;
+    free(temp);
 }
 
 Node *searchByValue(Stack *stack, int value)
@@ -49,6 +50,7 @@ Node *searchByValue(Stack *stack, int value)
         {
             return current;
         }
+        current = current->next;
     }
     return NULL;
 }
@@ -88,6 +90,5 @@ void traverseStack(Stack *stack)
 
 bool isEmpty(Stack *stack)
 {
-    free(stack->top);
     return stack->top == NULL;
 }

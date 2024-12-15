@@ -7,9 +7,12 @@ int main()
     Stack stack;
     initStack(&stack);
 
-    push(&stack, 10);
-    push(&stack, 20);
-    push(&stack, 30);
+    const int first = 10;
+    const int second = 20;
+    const int third = 30;
+    push(&stack, first);
+    push(&stack, second);
+    push(&stack, third);
 
     printf("After pushing elements:\n");
     traverseStack(&stack);
@@ -19,7 +22,7 @@ int main()
     printf("After popping an element:\n");
     traverseStack(&stack);
 
-    Node *searchResult = searchByValue(&stack, 20);
+    Node* searchResult = searchByValue(&stack, second);
     if (searchResult != NULL)
     {
         printf("Element with value 20 found.\n");
