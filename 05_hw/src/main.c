@@ -2,7 +2,8 @@
 
 #include <stdio.h>
 
-int main() {
+int main()
+{
     Stack stack;
     initStack(&stack);
 
@@ -18,19 +19,21 @@ int main() {
     printf("After popping an element:\n");
     traverseStack(&stack);
 
-    Node* searchResult = searchByValue(&stack, 20);
-    if (searchResult != NULL) {
+    Node *searchResult = searchByValue(&stack, 20);
+    if (searchResult != NULL)
+    {
         printf("Element with value 20 found.\n");
-    } else {
+    }
+    else
+    {
         printf("Element with value 20 not found.\n");
     }
 
-    Node* topElement = getTop(&stack);
-    if (topElement != NULL) {
+    Node *topElement = getTop(&stack);
+    if (topElement != NULL)
+    {
         printf("Top element: %d\n", topElement->data);
     }
 
     return 0;
 }
-
-
