@@ -17,5 +17,6 @@ endif()
 
 add_subdirectory(test)
 enable_testing()
+add_test(tests test)
 
 add_subdirectory(benchmark)
